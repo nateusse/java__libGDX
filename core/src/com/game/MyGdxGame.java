@@ -1,13 +1,65 @@
 package com.game;
 
 import com.badlogic.gdx.Game;
-import com.game.screens.AnimationTexture;
-import com.game.screens.SetUpNinja;
-import com.game.screens.TextureNinja;
+import com.badlogic.gdx.Screen;
+import com.badlogic.gdx.graphics.g2d.BitmapFont;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
+
+import com.game.screens.MainScreen;
+
 
 public class MyGdxGame extends Game {
+
+	public static final float WIDTH = 900;
+	public static final float HEIGHT = 600;
+
+	private Screen currentScreen;
+
+	private SpriteBatch batch;
+	private BitmapFont font;
+	private ShapeRenderer shape;
 	@Override
 	public void create () {
-		setScreen(new AnimationTexture());
+		batch = new SpriteBatch();
+		font = new BitmapFont();
+		shape = new ShapeRenderer();
+		setScreen(new MainScreen(this));
+	}
+
+	@Override
+	public void setScreen(Screen screen){
+		assert (screen != currentScreen);
+		super.setScreen(screen);
+
+		if (currentScreen != null){
+			currentScreen.dispose();
+		}
+		currentScreen = screen;
+	}
+
+	@Override
+	public void render () {
+		super.render();
+	}
+
+	@Override
+	public void dispose () {
+		currentScreen.dispose();
+		batch.dispose();
+		shape.dispose();
+		font.dispose();
+	}
+
+	public SpriteBatch getBatch(){
+		return batch;
+	}
+
+	public BitmapFont getFont(){
+		return font;
+	}
+
+	public ShapeRenderer getShape(){
+		return shape;
 	}
 }

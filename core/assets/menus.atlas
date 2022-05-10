@@ -1,0 +1,27 @@
+
+menus.png
+size: 1227, 1227
+format: RGBA8888
+filter: Nearest, Nearest
+repeat: none
+game_over
+  rotate: false
+  xy: 316, 5
+  size: 259, 194
+  orig: 259, 194
+  offset: 0, 0
+  index: -1
+grass
+  rotate: false
+  xy: 2, 201
+  size: 1024, 1024
+  orig: 1024, 1024
+  offset: 0, 0
+  index: -1
+title
+  rotate: false
+  xy: 2, 2
+  size: 312, 197
+  orig: 500, 197
+  offset: 106, 0
+  index: -1

@@ -2,9 +2,7 @@ package com.game.screens;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
-import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.OrthographicCamera;
-import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
@@ -24,7 +22,6 @@ import com.badlogic.gdx.utils.viewport.ExtendViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
 import com.game.MyGdxGame;
 import com.game.entities.Ninja;
-import com.game.entities.Pie;
 
 import java.text.MessageFormat;
 import java.util.*;
@@ -33,7 +30,7 @@ public class LevelScreen extends BaseScreen {
 
 
     private Ninja ninja;
-   private ArrayList<Pie> pies;
+
     private static final float WORLD_WIDTH = 20;
     private static final float WORLD_HEIGHT = 20;
     private static final float BLOCK_SIZE = 1;
@@ -62,8 +59,6 @@ public class LevelScreen extends BaseScreen {
 
     // 5 blocks / second
     private float velocity = 5f;
-
-    Pie pie;
 
 
     //Texturas

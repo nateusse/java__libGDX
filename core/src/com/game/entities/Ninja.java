@@ -20,7 +20,7 @@ import com.badlogic.gdx.utils.viewport.Viewport;
 import com.game.MyGdxGame;
 import com.game.scene.Scene;
 import com.game.screens.BaseScreen;
-import com.game.utils.BaseActor;
+
 
 import java.util.EnumMap;
 import java.util.Map;
@@ -30,7 +30,7 @@ import static com.badlogic.gdx.Gdx.input;
 public class Ninja extends Actor {
 
 
-    private Pie pie;
+
     private Scene scene;
     private final ShapeRenderer shape;
     public static final float BLOCK_SIZE = 1;
